@@ -1,11 +1,20 @@
-import React from 'react'
+import React from 'react';
 
-function App() {
-  return (
-    <div>
-      
-    </div>
-  )
+import  Cards from './components/Cards/Cards';
+import Chart from './components/Chart/Chart';
+import CountryPicker from './components/CountryPicker/CountryPicker';
+
+class App extends React.Component{
+    render(){
+        return(
+            <div>
+                    <h1> CORONA</h1>
+                    <Cards />
+                    <Chart />
+                    <CountryPicker />
+            </div>
+        )
+    }
 }
 
 export default App;
