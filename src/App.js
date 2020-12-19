@@ -5,11 +5,12 @@ import React from 'react';
 // import CountryPicker from './components/CountryPicker/CountryPicker';
 
 import {Cards, Chart, CountryPicker } from './components';
+import styles from './App.module.css';
 
 class App extends React.Component{
     render(){
         return(
-            <div>
+            <div className={styles.container}>
                     <h1> CORONA</h1>
                     <Cards />
                     <Chart />

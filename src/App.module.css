@@ -1,0 +1,11 @@
+body{
+    background-color: rgb(228, 227, 236);
+    font-family: 'Rubik', sans-serif;
+
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
