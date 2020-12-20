@@ -9,7 +9,7 @@ class App extends React.Component{
 
     state ={
         data :{ },
-        country: ''
+        country: ' '
     }
 
     async componentDidMount(){
@@ -19,7 +19,10 @@ class App extends React.Component{
     }
 
     handleCountryChange= async (country)=>{
-        console.log(country);
+
+        const fetchedData = await fetchData(country);
+        
+        this.setState({data:fetchedData, country: country});
     }
 
     render(){
