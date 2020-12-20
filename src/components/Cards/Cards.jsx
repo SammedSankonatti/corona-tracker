@@ -1,10 +1,41 @@
-import React from 'react'
+import React from 'react';
+import {Card, CardContent, Typography, Grid} from '@material-ui/core';
 
-const Cards = (props) => {
-    console.log(props);
+import styles from './Cards.module.css';
+
+
+const Cards = ({ data: { confirmed, recovered, deaths, lastUpdate}}) => {
+    if(!confirmed){
+        return 'Loading....'
+    }
     return (
-        <div>
-            <h2> Cards</h2>
+        <div className={styles.container}>
+           <Grid container spacing={3} justify="center">
+                <Grid item component={Card}>
+                    <CardContent>
+                        <Typography color="textSecondary" gutterBottom >Infected</Typography>
+                        <Typography variant="h5"> {confirmed.value} </Typography>
+                        <Typography color="textSecondary"> REAL DATE</Typography>
+                        <Typography variant="body2">Number of active cases from COVID-19</Typography>
+                    </CardContent>
+                </Grid>
+                 <Grid item component={Card}>
+                    <CardContent>
+                        <Typography color="textSecondary" gutterBottom >Infected</Typography>
+                        <Typography variant="h5"> REAL DATA</Typography>
+                        <Typography color="textSecondary"> REAL DATE</Typography>
+                        <Typography variant="body2">Number of active cases from COVID-19</Typography>
+                    </CardContent>
+                </Grid>
+                 <Grid item component={Card}>
+                    <CardContent>
+                        <Typography color="textSecondary" gutterBottom >Infected</Typography>
+                        <Typography variant="h5"> REAL DATA</Typography>
+                        <Typography color="textSecondary"> REAL DATE</Typography>
+                        <Typography variant="body2">Number of active cases from COVID-19</Typography>
+                    </CardContent>
+                </Grid>
+           </Grid>
         </div>
     )
 }

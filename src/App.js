@@ -20,7 +20,6 @@ class App extends React.Component{
         const {data} = this.state;
         return(
             <div className={styles.container}>
-                    <h1> CORONA</h1>
                     <Cards data={data} />
                     <Chart />
                     <CountryPicker />
